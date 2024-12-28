@@ -111,6 +111,7 @@ public class Loops {
         ******************************************************************
         ***************************for************************************
         */
+        /*
         int tab, mult;
         System.out.println("Please enter the number to do your multi tab");
         tab=sc.nextInt();
@@ -119,6 +120,7 @@ public class Loops {
             mult=i*tab;
             System.out.println(i+".-"+mult);
         }
+        */
         /*
         *********************************************************************************************
         *********************************************************************************************
@@ -130,6 +132,18 @@ public class Loops {
         You can try calculating it using a while loop as well.
         ******************************************************************
         ***************************while**********************************
+        */
+        int i=1, factor, acum=0;
+        System.out.println("Please enter a number to do factorial");
+        factor=sc.nextInt();
+        while(factor>i){
+            System.out.println(factor+"*"+(factor-1));
+            acum=factor*(factor-1);
+            factor--;
+        }
+        System.out.println("Total: "+acum);
+        /*
+        
         ******************************************************************
         ***************************do while*******************************
         ******************************************************************
