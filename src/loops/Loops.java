@@ -133,12 +133,12 @@ public class Loops {
         ******************************************************************
         ***************************while**********************************
         */
-        int i=1, factor, acum=0;
+        int i=1, factor, acum=1;
         System.out.println("Please enter a number to do factorial");
         factor=sc.nextInt();
         while(factor>i){
             System.out.println(factor+"*"+(factor-1));
-            acum=factor*(factor-1);
+            acum*=factor;
             factor--;
         }
         System.out.println("Total: "+acum);
