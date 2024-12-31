@@ -149,6 +149,7 @@ public class Loops {
         ******************************************************************
         ***************************do while*******************************
         */
+        /*
         int i=1,factor, acum=1;
         System.out.println("Please, enter a number to do its factorial");
         factor=sc.nextInt();
@@ -160,9 +161,21 @@ public class Loops {
         }while(factor>=i);
         System.out.println("");
         System.out.println(" is "+acum);
+        */
         /*
         ******************************************************************
         ***************************for************************************
+        */
+        int factor, acum=1;
+        System.out.println("Please enter a number to do its factorial");
+        factor=sc.nextInt();
+        System.out.println("The factor of "+factor);
+        for (int i = 1; factor >= i; factor--) {
+            acum*=factor;
+            System.out.print(factor+"*");
+        }
+        System.out.println("is: "+acum);
+        /*
         
         *********************************************************************************************
         *********************************************************************************************
