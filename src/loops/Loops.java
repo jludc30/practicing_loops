@@ -133,6 +133,7 @@ public class Loops {
         ******************************************************************
         ***************************while**********************************
         */
+        /*
         int i=1, factor, acum=1;
         System.out.println("Please enter a number to do factorial");
         factor=sc.nextInt();
@@ -142,10 +143,24 @@ public class Loops {
             factor--;
         }
         System.out.println("Total: "+acum);
+        */
         /*
         
         ******************************************************************
         ***************************do while*******************************
+        */
+        int i=1,factor, acum=1;
+        System.out.println("Please, enter a number to do its factorial");
+        factor=sc.nextInt();
+        System.out.println("The factorial of "+factor);
+        do{
+            System.out.print(factor+"*");
+            acum=acum*factor;
+            factor--;
+        }while(factor>=i);
+        System.out.println("");
+        System.out.println(" is "+acum);
+        /*
         ******************************************************************
         ***************************for************************************
         
