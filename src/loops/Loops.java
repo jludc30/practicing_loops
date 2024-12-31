@@ -166,6 +166,7 @@ public class Loops {
         ******************************************************************
         ***************************for************************************
         */
+        /*
         int factor, acum=1;
         System.out.println("Please enter a number to do its factorial");
         factor=sc.nextInt();
@@ -175,6 +176,7 @@ public class Loops {
             System.out.print(factor+"*");
         }
         System.out.println("is: "+acum);
+        */
         /*
         
         *********************************************************************************************
@@ -187,6 +189,23 @@ public class Loops {
         Give hints after each guess (e.g., "Too high!" or "Too low!").
         ******************************************************************
         ***************************while**********************************
+        */
+        int ale, answer;
+        System.out.println("Guess the number, type the number you think is ");
+        answer=sc.nextInt();
+        ale =(int)(Math.random() * 100)+1;
+        System.out.println(ale);
+        while(answer!=ale){
+            if(answer>ale){
+                System.out.println("Too high, type again");
+                answer=sc.nextInt();
+            }else if (answer<ale){
+                System.out.println("Too low, type again");
+                answer=sc.nextInt();
+            }
+        }
+        System.out.println("you get that number right, congrats");
+        /*
         ******************************************************************
         ***************************do while*******************************
         ******************************************************************
