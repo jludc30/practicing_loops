@@ -190,6 +190,7 @@ public class Loops {
         ******************************************************************
         ***************************while**********************************
         */
+        /*
         int ale, answer;
         System.out.println("Guess the number, type the number you think is ");
         answer=sc.nextInt();
@@ -205,9 +206,31 @@ public class Loops {
             }
         }
         System.out.println("you get that number right, congrats");
+        */
         /*
         ******************************************************************
         ***************************do while*******************************
+        */
+        int ale, answer;
+        
+        System.out.println("Guess the aleatory number");
+        answer=sc.nextInt();
+        ale=(int)(Math.random()*100+1);
+        System.out.println(ale);
+        do{
+            if(ale>answer){
+                System.out.println("the number you type is so low");
+                System.out.println("Try it again, type it");
+                answer=sc.nextInt();
+            }
+            else if(ale<answer){
+                System.out.println("the number you type is so high");
+                System.out.println("Try it again, type it");
+                answer=sc.nextInt();
+            }
+        }while(answer!=ale);
+        System.out.println("Congrats, you got it");
+        /*
         ******************************************************************
         ***************************for************************************
         
