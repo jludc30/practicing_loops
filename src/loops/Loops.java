@@ -236,6 +236,7 @@ public class Loops {
         ******************************************************************
         ***************************for************************************
         */
+        /*
         int answer, ale;
         System.out.println("the system is going to generate an aleatory number, so you have to guess what is it");
         System.out.println("Type the number you think it is");
@@ -252,8 +253,8 @@ public class Loops {
             }
         }
         System.out.println("Congrats, you got it");
+        */
         /*
-        
         *********************************************************************************************
         *********************************************************************************************
         *********************************************************************************************
@@ -263,6 +264,17 @@ public class Loops {
         Use a while loop to reverse the digits of the number (e.g., if they enter 123, the output should be 321).
         ******************************************************************
         ***************************while**********************************
+        */
+        int num, lastdigit, reverted=0;
+        System.out.println("Enter your number to reverse it");
+        num=sc.nextInt();
+        while(num>0){
+            lastdigit=num%10;
+            reverted=reverted*10+lastdigit;
+            num/=10;
+        }
+        System.out.println(reverted);
+        /*
         ******************************************************************
         ***************************do while*******************************
         ******************************************************************
