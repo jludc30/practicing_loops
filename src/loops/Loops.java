@@ -211,6 +211,7 @@ public class Loops {
         ******************************************************************
         ***************************do while*******************************
         */
+        /*
         int ale, answer;
         
         System.out.println("Guess the aleatory number");
@@ -230,9 +231,28 @@ public class Loops {
             }
         }while(answer!=ale);
         System.out.println("Congrats, you got it");
+        */
         /*
         ******************************************************************
         ***************************for************************************
+        */
+        int answer, ale;
+        System.out.println("the system is going to generate an aleatory number, so you have to guess what is it");
+        System.out.println("Type the number you think it is");
+        answer=sc.nextInt();
+        ale=(int)(Math.random()*100+1);
+        System.out.println(ale);
+        for (; ale != answer;) {
+            if(answer>ale){
+                System.out.println("You type a higher number, try it again");
+                answer=sc.nextInt();
+            }else if(answer<ale){
+                System.out.println("You type a lower number, try it again");
+                answer=sc.nextInt();
+            }
+        }
+        System.out.println("Congrats, you got it");
+        /*
         
         *********************************************************************************************
         *********************************************************************************************
