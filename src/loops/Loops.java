@@ -4,9 +4,8 @@ import java.util.Scanner;
 
 public class Loops {
 
-
     public static void main(String[] args) {
-       Scanner sc = new Scanner(System.in);
+        Scanner sc = new Scanner(System.in);
         /*
         *********************************************************************************************
         *********************************************************************************************
@@ -31,7 +30,7 @@ public class Loops {
             x++;
         }while(x<11);
          */
-        /*
+ /*
         *********************************************************************************************
         *********************************************************************************************
         *********************************************************************************************
@@ -67,8 +66,8 @@ public class Loops {
             System.out.println("Number: " + x);
             x++;
         } while (x <= stop);
-        */
-        /*
+         */
+ /*
         *********************************************************************************************
         *********************************************************************************************
         *********************************************************************************************
@@ -77,8 +76,8 @@ public class Loops {
         Ask the user for a number.
         Use a for loop to print the multiplication table for that number (e.g., for 5, it should print 5, 10, 15, ... up to 10 times the number).
         You can also try this with while and do-while loops.
-        */
-        /*
+         */
+ /*
         ******************************************************************
         ***************************while**********************************
         
@@ -91,12 +90,12 @@ public class Loops {
             System.out.println(i+".-"+mult);
             i++;
         }
-        */
-        /*
+         */
+ /*
         ******************************************************************
         ***************************do while*******************************
-        */
-        /*
+         */
+ /*
         int i=1, tab, mult;
         System.out.println("Please enter a number of your multiplication tab");
         tab=sc.nextInt();
@@ -106,12 +105,12 @@ public class Loops {
             System.out.println(i+".-"+mult);
             i++;
         }while(i<=10);
-        */
-        /*
+         */
+ /*
         ******************************************************************
         ***************************for************************************
-        */
-        /*
+         */
+ /*
         int tab, mult;
         System.out.println("Please enter the number to do your multi tab");
         tab=sc.nextInt();
@@ -120,8 +119,8 @@ public class Loops {
             mult=i*tab;
             System.out.println(i+".-"+mult);
         }
-        */
-        /*
+         */
+ /*
         *********************************************************************************************
         *********************************************************************************************
         *********************************************************************************************
@@ -132,8 +131,8 @@ public class Loops {
         You can try calculating it using a while loop as well.
         ******************************************************************
         ***************************while**********************************
-        */
-        /*
+         */
+ /*
         int i=1, factor, acum=1;
         System.out.println("Please enter a number to do factorial");
         factor=sc.nextInt();
@@ -143,13 +142,13 @@ public class Loops {
             factor--;
         }
         System.out.println("Total: "+acum);
-        */
-        /*
+         */
+ /*
         
         ******************************************************************
         ***************************do while*******************************
-        */
-        /*
+         */
+ /*
         int i=1,factor, acum=1;
         System.out.println("Please, enter a number to do its factorial");
         factor=sc.nextInt();
@@ -161,12 +160,12 @@ public class Loops {
         }while(factor>=i);
         System.out.println("");
         System.out.println(" is "+acum);
-        */
-        /*
+         */
+ /*
         ******************************************************************
         ***************************for************************************
-        */
-        /*
+         */
+ /*
         int factor, acum=1;
         System.out.println("Please enter a number to do its factorial");
         factor=sc.nextInt();
@@ -176,8 +175,8 @@ public class Loops {
             System.out.print(factor+"*");
         }
         System.out.println("is: "+acum);
-        */
-        /*
+         */
+ /*
         
         *********************************************************************************************
         *********************************************************************************************
@@ -189,8 +188,8 @@ public class Loops {
         Give hints after each guess (e.g., "Too high!" or "Too low!").
         ******************************************************************
         ***************************while**********************************
-        */
-        /*
+         */
+ /*
         int ale, answer;
         System.out.println("Guess the number, type the number you think is ");
         answer=sc.nextInt();
@@ -206,12 +205,12 @@ public class Loops {
             }
         }
         System.out.println("you get that number right, congrats");
-        */
-        /*
+         */
+ /*
         ******************************************************************
         ***************************do while*******************************
-        */
-        /*
+         */
+ /*
         int ale, answer;
         
         System.out.println("Guess the aleatory number");
@@ -231,12 +230,12 @@ public class Loops {
             }
         }while(answer!=ale);
         System.out.println("Congrats, you got it");
-        */
-        /*
+         */
+ /*
         ******************************************************************
         ***************************for************************************
-        */
-        /*
+         */
+ /*
         int answer, ale;
         System.out.println("the system is going to generate an aleatory number, so you have to guess what is it");
         System.out.println("Type the number you think it is");
@@ -253,8 +252,8 @@ public class Loops {
             }
         }
         System.out.println("Congrats, you got it");
-        */
-        /*
+         */
+ /*
         *********************************************************************************************
         *********************************************************************************************
         *********************************************************************************************
@@ -264,16 +263,12 @@ public class Loops {
         Use a while loop to reverse the digits of the number (e.g., if they enter 123, the output should be 321).
         ******************************************************************
         ***************************while**********************************
-        */
-        int num, lastdigit, reverted=0;
+         */
+        int num,reverted;
         System.out.println("Enter your number to reverse it");
-        num=sc.nextInt();
-        while(num>0){
-            lastdigit=num%10;
-            reverted=reverted*10+lastdigit;
-            num/=10;
-        }
-        System.out.println(reverted);
+        num = sc.nextInt();
+        reverted=Ex6.whil(num);
+        System.out.println("The number reverted is: "+reverted);
         /*
         ******************************************************************
         ***************************do while*******************************
@@ -418,7 +413,18 @@ public class Loops {
         ******************************************************************
         ***************************for************************************
         
-         */ 
+         */
     }
-    
+
+    public class Ex6 {
+        public static int whil(int num) {
+            int reverted = 0, lastdigit;
+            while (num > 0) {
+                lastdigit = num % 10;
+                reverted = reverted * 10 + lastdigit;
+                num /= 10;
+            }
+            return reverted;
+        }
+    }
 }
