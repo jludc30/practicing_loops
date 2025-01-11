@@ -264,11 +264,13 @@ public class Loops {
         ******************************************************************
         ***************************while**********************************
          */
+        /* 
         int num,reverted;
         System.out.println("Enter your number to reverse it");
         num = sc.nextInt();
         reverted=Ex6.whil(num);
         System.out.println("The number reverted is: "+reverted);
+        */
         /*
         ******************************************************************
         ***************************do while*******************************
@@ -408,6 +410,14 @@ public class Loops {
         When the user enters -1, print the largest and smallest numbers.
         ******************************************************************
         ***************************while**********************************
+        */
+        int x;
+        System.out.println("You are going to enter numbers and when you enter -1, I´ll stop"
+                + "And I´ll tell you the smallest number and the highest one");
+        System.out.println("So please enter your number");
+        x=sc.nextInt();
+        Ex15.whil(x);
+        /*
         ******************************************************************
         ***************************do while*******************************
         ******************************************************************
@@ -425,6 +435,26 @@ public class Loops {
                 num /= 10;
             }
             return reverted;
+        }
+    }
+    public class Ex15{
+        public static void whil(int x){
+            Scanner sc=new Scanner(System.in);
+            int smallest, highest;
+            smallest=x;
+            highest=x;
+            while(x!=-1){
+                if(x>highest){
+                    highest=x;
+                }
+                if(x<smallest){
+                    smallest=x;
+                }
+                System.out.println("type other number");
+                x=sc.nextInt();
+            }
+            System.out.println("The smallest number in the series is: "+smallest);
+            System.out.println("The higher number in the series is: "+highest);
         }
     }
 }
