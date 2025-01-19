@@ -274,8 +274,24 @@ public class Loops {
         /*
         ******************************************************************
         ***************************do while*******************************
+        */
+        /*
+        int num, lastdigit, reverted;
+        System.out.println("Please enter a number to reverse it");
+        num=sc.nextInt();
+        reverted=Ex6.dowhile(num);
+        System.out.println("The number reverted is: "+reverted);
+        */
+        /*
         ******************************************************************
         ***************************for************************************
+        */
+        int x,reverted;
+        System.out.println("Please enter a number and I´ll revert that number");
+        x=sc.nextInt();
+        reverted=Ex6.four(x);
+        System.out.println("The number reverted is: "+reverted);
+        /*
         
         *********************************************************************************************
         *********************************************************************************************
@@ -411,12 +427,14 @@ public class Loops {
         ******************************************************************
         ***************************while**********************************
         */
+        /*
         int x;
         System.out.println("You are going to enter numbers and when you enter -1, I´ll stop"
                 + "And I´ll tell you the smallest number and the highest one");
         System.out.println("So please enter your number");
         x=sc.nextInt();
         Ex15.whil(x);
+        */
         /*
         ******************************************************************
         ***************************do while*******************************
@@ -436,6 +454,25 @@ public class Loops {
             }
             return reverted;
         }
+        public static int dowhile (int num){
+            int lastdigit, reverted=0;
+            do{
+                lastdigit=num%10;
+                reverted=reverted*10+lastdigit;
+                num/=10;
+            }while(num>0);
+            
+            return reverted;
+        }
+         public static int four (int num){
+             int lastdigit, reverted=0;
+             for (; num > 0; ) {
+                 lastdigit=num%10;
+                 reverted=reverted*10+lastdigit;
+                 num/=10;
+             }
+             return reverted;
+         }
     }
     public class Ex15{
         public static void whil(int x){
