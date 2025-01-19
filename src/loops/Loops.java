@@ -286,11 +286,13 @@ public class Loops {
         ******************************************************************
         ***************************for************************************
         */
+        /*
         int x,reverted;
         System.out.println("Please enter a number and I´ll revert that number");
         x=sc.nextInt();
         reverted=Ex6.four(x);
         System.out.println("The number reverted is: "+reverted);
+        */
         /*
         
         *********************************************************************************************
@@ -438,6 +440,14 @@ public class Loops {
         /*
         ******************************************************************
         ***************************do while*******************************
+        */
+        int x;
+        System.out.println("This program is to enter numbers and when you enter -1, the program will stop"
+                + "and tell you the biggest and smallest number that you entered");
+        System.out.println("So, please enter a number: ");
+        x=sc.nextInt();
+        Ex15.dowhile(x);
+        /*
         ******************************************************************
         ***************************for************************************
         
@@ -492,6 +502,24 @@ public class Loops {
             }
             System.out.println("The smallest number in the series is: "+smallest);
             System.out.println("The higher number in the series is: "+highest);
+        }
+        public static void dowhile(int number){
+            Scanner sc=new Scanner(System.in);
+            int biggest, smallest;
+            biggest=number;
+            smallest=number;
+            do {
+                if (number>biggest) {
+                    biggest=number;
+                }
+                if(number<smallest){
+                    smallest=number;
+                }
+                System.out.println("Type other number: ");
+                number=sc.nextInt();
+            } while (number!=-1);
+            System.out.println("The biggest number is: "+biggest);
+            System.out.println("The smallest number is: "+smallest);
         }
     }
 }
